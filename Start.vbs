@@ -1,1 +1,1 @@
-CreateObject("WScript.Shell").Run "cmd /c D:/mybat/±ÚÖ½/wallpaper.bat",0
+CreateObject("WScript.Shell").Run "cmd /c %cd%\wallpaper.bat",0
