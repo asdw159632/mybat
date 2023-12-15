@@ -304,5 +304,5 @@ goto end
 
 :end
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "WallpaperStyle" /t REG_SZ /d 2 /f
-RunDll32.exe USER32.DLL, UpdatePerUserSystemParameters
+RunDll32.exe USER32.DLL, UpdatePerUserSystemParameters 1,True
 exit
