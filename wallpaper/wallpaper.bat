@@ -303,6 +303,11 @@ if %day% geq %Ð¡º®R% (
 goto end
 
 :end
+rem reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "Wallpaper" /d "%cd%\210478.jpg" /f
 reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v "WallpaperStyle" /t REG_SZ /d 2 /f
+set n=61
+:loop
+set /a n-=1
 RunDll32.exe USER32.DLL, UpdatePerUserSystemParameters 1,True
-exit
+if %n% == 0 exit
+goto loop
